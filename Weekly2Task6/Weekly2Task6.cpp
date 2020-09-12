@@ -2,31 +2,52 @@
 #include <iostream>
 #include <string>
 
+bool flag = true;
 char option = 0;
 
 int main()
 {
-    std::cout << "What grade do you want in Programing 1? ";
-    std::cin >> option;
-    switch (option) {
-    case 'A':case 'a':
-        std::cout << "Outstanding" << std::endl;
-        break;
-    case 'B':case 'b':
-        std::cout << "Very good" << std::endl;
-        break;
-    case'C':case 'c':
-        std::cout << "Good" << std::endl;
-        break;
-    case 'D':case 'd':
-        std::cout << "Some flaws" << std::endl;
-        break;
-    case 'E':case 'e':
-        std::cout << "Not very good..." << std::endl;
-        break;
-    case 'F':case 'f':
-        std::cout << "Fail" << std::endl;
-        break;
+    while (flag == true) {
+        std::cout << "What grade do you want in Programing 1? ";
+        std::cin >> option;
+        
+        switch (option) {
+        case 'A':case 'a':
+            std::cout << "Outstanding" << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        case 'B':case 'b':
+            std::cout << "Very good" << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        case'C':case 'c':
+            std::cout << "Good" << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        case 'D':case 'd':
+            std::cout << "Some flaws" << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        case 'E':case 'e':
+            std::cout << "Not very good..." << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        case 'F':case 'f':
+            std::cout << "Fail" << std::endl;
+            std::cout << "You sure you want this grade?" << std::endl;
+            std::cout << " " << std::endl;
+            flag = false;
+            break;
+        default:
+            std::cout << "That is not a grade!" << std::endl;
+            std::cout << " " << std::endl;
+            break;
+        }
     }
 }
 
